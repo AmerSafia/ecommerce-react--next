@@ -2,7 +2,7 @@ import React from "react";
 import Link from "next/link";
 import { urlFor } from "../lib/client";
 const Banner = ({ banner }) => {
-  console.log(banner);
+  (banner);
   return (
     <div className="hero-banner-container">
       <div>

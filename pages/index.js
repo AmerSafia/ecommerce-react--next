@@ -12,7 +12,6 @@ const Home = ({ products, bannerData }) => {
         <p>Speakers of many variations</p>
       </div>
       <div className='products-container'>
-        {console.log(products)}
         {products?.map((product) => <Product key={product._id} product={product} />)}
       </div>
       <FooterBanner FooterBanner={bannerData[1]} />
@@ -24,7 +23,6 @@ export const getServerSideProps = async () => {
   const products = await client.fetch(query)
   const bannerquery = "*[_type=='banner']"
   const bannerData = await client.fetch(bannerquery)
-
   return {
     props: { products, bannerData }
   }
