@@ -1,6 +1,9 @@
 import React from 'react'
 import { client } from '../lib/client'
-import { Product, FooterBanner, Banner } from '../components/index'
+import Product from '../components/Product';
+import FooterBanner from '../components/FooterBanner';
+import Banner from '../components/Banner';
+
 const Home = ({ products, bannerData }) => {
   return (
     <>
